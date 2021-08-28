@@ -22,7 +22,7 @@ public class Estoque {
 
     public static void Saida(Produto produto, int quantidade){               
         for (Produto prod : Estoque) {
-            if(prod.Equals(produto)){
+            if(prod.equals(produto)){
                 if(quantidade <= prod.getQuantidade()){                    
                     int quantAux = prod.getQuantidade();
                     quantAux = quantAux - quantidade;
@@ -34,7 +34,7 @@ public class Estoque {
 
     public static void Entrada(Produto produto, int quantidade){               
         for (Produto prod : Estoque) {
-            if(prod.Equals(produto)){
+            if(prod.equals(produto)){
                 int quantAux = quantidade + prod.getQuantidade();
                 prod.setQuantidade(quantAux);
                 
@@ -44,7 +44,7 @@ public class Estoque {
 
     public static int ProcurarProduto(Produto produto){
         for (Produto prod : Estoque) {
-            if(produto.Equals(prod)){
+            if(produto.equals(prod)){
                 return 1;
             }
         }
@@ -59,7 +59,7 @@ public class Estoque {
 
     public static double RetornarPreco(Produto produto){
         for (Produto prod : Estoque){
-            if(prod.Equals(produto)){
+            if(prod.equals(produto)){
                return prod.getPreco(); 
             }
         }
@@ -68,7 +68,7 @@ public class Estoque {
 
     public static Produto RetornarProduto(Produto produto){
         for (Produto prod : Estoque) {
-            if(produto.Equals(prod)){
+            if(produto.equals(prod)){
                 return prod;
             }
         }
